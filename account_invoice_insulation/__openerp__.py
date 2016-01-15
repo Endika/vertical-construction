@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
-#    
+#
 #    OpenERP, Open Source Management Solution
 #    Copyright (C) 2012 Savoir-faire Linux (<http://www.savoirfairelinux.com>).
 #
@@ -15,30 +15,31 @@
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.     
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
 
 {
-    "name" : "Insulation",
+    "name" : "Invoice Insulation",
     "version" : "0.1",
     "author" : "Savoir-faire Linux,Odoo Community Association (OCA)",
     "website" : "http://www.savoirfairelinux.com",
     "license" : "AGPL-3",
-    "category" : "Construction",
+    "category" : "Accounting",
     "description" : """
-This module is for construction companies in the insulation business. It installs
-all the modules to manage, sell, invoice and deliver insulation products with
-thermal resistance (R-Value).
-
-More information about the R-value here:
-http://en.wikipedia.org/wiki/R-value_(insulation)
+This module allows you to generate invoices with thermal resistance for insulation products.
     """,
+    "depends" : [
+	"account",
+	"product_insulation",
+	],
     "images" : [],
-    "depends" : ["sale_insulation"],
-    "demo" : [],
     "test" : [],
-    "data" : [],
-    "installable": True,
+    "demo" : [],
+    "data" : [
+	"report/account_invoice_insulation_report.xml",
+	"account_invoice_insulation_view.xml",
+	],
+    "installable": False,
     "complexity": "easy",
 }

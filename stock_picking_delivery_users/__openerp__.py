@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
-#    
+#
 #    OpenERP, Open Source Management Solution
 #    Copyright (C) 2012 Savoir-faire Linux (<http://www.savoirfairelinux.com>).
 #
@@ -15,32 +15,28 @@
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.     
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
 
 {
-    "name" : "Stock Picking Delivery Order Insulation",
+    "name" : "Stock Picking Delivery Users",
     "version" : "1.0",
     "author" : "Savoir-faire Linux,Odoo Community Association (OCA)",
     "website" : "http://www.savoirfairelinux.com",
     "license" : "AGPL-3",
     "category" : "Stock",
     "description" : """
-This module adds area and thermal resistance of insulation products to the 
-delivery orders views and report.
+This module allows you to assign different users to a delivery order and display
+the calendar per user.
     """,
-    "depends" : [
-        "product_insulation",
-        "stock_picking_delivery_users",
-    ],
+    "images" : [],
+    "depends" : ["stock"],
     "demo" : [],
     "test" : [],
-    "images" : [],
-    "data" : [
-        "report/stock_picking_delivery_order_insulation.xml",
-        "stock_picking_delivery_insulation_view.xml",
+    "data": [
+        "stock_picking_delivery_users_view.xml",
     ],
-    "installable": True,
+    "installable": False,
     "complexity": "easy",
 }
